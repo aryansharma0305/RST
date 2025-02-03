@@ -28,12 +28,10 @@ app.set("views", path.resolve("./views"));
 app.use(express.static(__dirname+'/public'));
 
 
-//Love you baby❤️❤️
 
 
 
 //ROUTES
-
 
 
 
