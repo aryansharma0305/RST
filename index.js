@@ -32,7 +32,11 @@ app.use(express.static(__dirname+'/public'));
 
 
 //ROUTES
+const staticRouter = require("./routes/staticRoutes.js")
+app.use('/',staticRouter);
 
+const handleStaticRouter = require("./routes/handleStatic.js")
+app.use('/',handleStaticRouter);
 
 
 //Running
