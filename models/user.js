@@ -12,7 +12,6 @@ const userSchema = new mongoose.Schema({
     },
     name: {
       type: String,
-      required: true,
     },
     email: {
         type:String,
@@ -21,7 +20,6 @@ const userSchema = new mongoose.Schema({
     },
     password: {
       type: String,
-      required: true,
     },
     rating2:{
         type:Number,
@@ -49,9 +47,12 @@ const userSchema = new mongoose.Schema({
     },
     country:{
         type:String,
-        required:true,
+    },
+    role:{
+        type:String,
+        default: "USER",
     }
-  });
+  },{timestamps: true});
   
   const users = mongoose.model('users', userSchema);
   module.exports = users;

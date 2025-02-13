@@ -4,13 +4,14 @@ const router=express.Router()
 
 
 
-router.post("/signup",async (req,res)=>{
+// router.post("/signup",async (req,res)=>{
 
-    //signupLogic
+//     //signupLogic
 
-    res.redirect("/login");
-})
+//     res.redirect("/login");
+// })
 
-
+const {handleUserSignup} = require("../controllers/handleSignup");
+router.post("/signup", handleUserSignup);
 
 module.exports=router;
